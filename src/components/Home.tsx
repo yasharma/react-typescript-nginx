@@ -1,3 +1,4 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-export const Home = () => (<div>Home Pagess <Link to="/about"> About </Link></div>);
+const Home = () => (<div>Home Pages <Link to="/about"> About </Link></div>);
+export default Home;
