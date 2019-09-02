@@ -1,16 +1,19 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Home } from '../components/Home';
-import { About } from '../components/About';
+
+const Home = lazy(() => import('../components/Home'));
+const About = lazy(() => import('../components/About'));
 
 export const AppRouter = () => {
   return (
     <Router>
       <React.Fragment>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-      </Switch>  
+        <Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </Suspense>
       </React.Fragment>
     </Router>
   );
