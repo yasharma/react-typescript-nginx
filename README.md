@@ -39,6 +39,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### Enhancements
  - Add support for Code-Splitting for lazy loading of components using ([react-lazy](https://reactjs.org/docs/code-splitting.html#reactlazy))
+ - Handled component crash error gracefully using ([error-boundries](https://reactjs.org/docs/error-boundaries.html))
 
 ## Learn More
 
